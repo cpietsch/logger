@@ -32,7 +32,8 @@ log events will be stored in a buffer array before sent to the php endpoint. siz
 
 your url to the php endpoint
 
+## logging
 
-**logger.log({ action: "test", bla: 1, foo: "bar", arr: [1,2,3] });**
+    logger.log({ action: "test", bla: 1, foo: "bar", arr: [1,2,3] });**
 
 you can put an js-object of your choice in the logger. very flexible.
