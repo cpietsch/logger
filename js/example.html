@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="logger.js"></script>
+<script>
+
+var logger = Logger()
+  .register("test")
+  .bufferSize(10)
+  .url("http://domain.com/path/to/logger.php");
+  
+
+logger.log({ action: "enter" });
+
+setInterval(function(){ 
+  logger.log({ action: "test", time: +new Date() });
+}, 100);
+
+
+logger.log({ action: "test", bla: 1, foo: "bar", arr: [1,2,3] });
+
+</script>
